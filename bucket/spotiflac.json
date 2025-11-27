@@ -1,10 +1,10 @@
 {
-    "version": "0.0.0",
+    "version": "6.3",
     "description": "Download Spotify tracks in FLAC format",
     "homepage": "https://github.com/afkarxyz/SpotiFLAC",
     "license": "MIT",
 
-    "url": "https://github.com/afkarxyz/SpotiFLAC/releases/download/v$version/SpotiFLAC.exe",
+    "url": "https://github.com/afkarxyz/SpotiFLAC/releases/download/v6.3/SpotiFLAC.exe",
     "hash": "sha256:SKIP",
     "bin": "SpotiFLAC.exe",
 
