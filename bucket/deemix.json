@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "description": "Deemix — a barebone deezer downloader library built from the ashes of Deezloader Remix",
+    "homepage": "https://github.com/deemix-app/deemix",
+    "license": "GPL-3.0",
+
+    "url": "https://github.com/deemix-app/deemix/releases/download/v1.0.0/deemix.exe",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bin": "deemix.exe",
+
+    "checkver": {
+        "url": "https://api.github.com/repos/deemix-app/deemix/releases/latest",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
+    },
+
+    "autoupdate": {
+        "url": "https://github.com/deemix-app/deemix/releases/download/v$version/deemix.exe"
+    }
+}
