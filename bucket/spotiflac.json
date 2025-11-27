@@ -9,8 +9,8 @@
     "bin": "SpotiFLAC.exe",
 
     "checkver": {
-        "github": "https://github.com/afkarxyz/SpotiFLAC",
-        "regex": "v([\\d.]+)"
+        "url": "https://api.github.com/repos/afkarxyz/SpotiFLAC/releases/latest",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
     },
 
     "autoupdate": {
