@@ -1,0 +1,35 @@
+name: Update Manifests
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # ogni ora
+  workflow_dispatch:       # permette di avviarlo manualmente
+
+jobs:
+  update:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Scoop
+        run: |
+          Set-ExecutionPolicy Bypass -Scope Process -Force
+          iwr -useb get.scoop.sh | iex
+
+      - name: Add bucket
+        run: scoop bucket add local-bucket "$PWD"
+
+      - name: Run checkver on all manifests
+        run: |
+          scoop config debug $true
+          & "$env:USERPROFILE\scoop\apps\scoop\current\bin\checkver.ps1" * "$PWD" -u
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Automatic manifest update"
+          git push
