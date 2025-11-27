@@ -4,8 +4,8 @@
     "homepage": "https://github.com/afkarxyz/SpotiFLAC",
     "license": "MIT",
 
-    "url": "https://github.com/afkarxyz/SpotiFLAC/releases/download/v6.3/SpotiFLAC.exe",
-    "hash": "3f6fde63fbffe08b3e92944eea3f40e88d9d56c15642e68bb4798f107f6739c5",
+    "url": "https://github.com/afkarxyz/SpotiFLAC/releases/download/v$version/SpotiFLAC.exe",
+    "hash": "sha256:SKIP",
     "bin": "SpotiFLAC.exe",
 
     "checkver": {
